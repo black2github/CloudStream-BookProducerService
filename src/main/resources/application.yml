@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: creation-book-service
+  cloud:
+    stream:
+      kafka:
+        binder:
+          auto-add-partitions: true
+      bindings:
+        output:
+          destination: creationBookServiceDestination
+          group: creationBookServiceGroup
+
+server:
+  port: 8050
